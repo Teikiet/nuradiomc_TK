@@ -1,0 +1,4 @@
+This is where event file are generated and submit to the condor cluster.
+Edit my_constant to change number of simulated neutrino energy.
+Run my_generate_sim_sub to create .sh and .sub file for condor.
+Run my_submitjob to submit job to the condor cluster
