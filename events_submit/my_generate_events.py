@@ -38,7 +38,7 @@ i_d = args.i_d
 EVTS_DIR = f"{evt_dir}/{EVTS_PATH}_n{NUM_FORMAT(NUM_EVENTS)}_{NUM_SIMS}_{E_MIN}to{E_MAX}_{i_d}"
 
 ENERGIES = np.logspace(E_MIN, E_MAX, num=NUM_SIMS, endpoint=True)
-PATH = "/home/kiet/Effective_Volume/events_submit"#"/data/user/tkiet/events/"#"/home/tkiet/nuradiomc" 
+PATH = "/home/tkiet/nuradiomc/events_submit/" 
 
 VOLUME = {
     "fiducial_zmin": -2.7 * units.km,
