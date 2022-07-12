@@ -1,6 +1,0 @@
-executable = /home/tkiet/nuradiomc/events_submit/scripts_cube_vpol_n1.000e04_5_16to20/20/events6.sh
-log = /home/tkiet/nuradiomc/events_submit/scripts_cube_vpol_n1.000e04_5_16to20/20/events6.log
-output = /home/tkiet/nuradiomc/events_submit/scripts_cube_vpol_n1.000e04_5_16to20/20/events6.out
-error = /home/tkiet/nuradiomc/events_submit/scripts_cube_vpol_n1.000e04_5_16to20/20/events6.err
-
-queue 1
