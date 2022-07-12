@@ -38,7 +38,11 @@ NUM_SIMS = int(args.num_sims)
 EVTS_DIR = f"{evt_dir}/{EVTS_PATH}_n{NUM_FORMAT(NUM_EVENTS)}_{NUM_SIMS}_{E_MIN}to{E_MAX}_{i_d}"
 
 ENERGIES = np.logspace(E_MIN, E_MAX, num=NUM_SIMS, endpoint=True)
+<<<<<<< HEAD
 PATH = "/home/tkiet/nuradiomc/events_submit" 
+=======
+PATH = "/home/tkiet/nuradiomc/events_submit/" 
+>>>>>>> 5bd9242b23d2ca0ca43d0ff3a8a630458cdc745f
 
 VOLUME = {
     "fiducial_zmin": -2.7 * units.km,
