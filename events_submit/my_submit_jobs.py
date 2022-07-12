@@ -8,7 +8,7 @@ import subprocess
 
 from my_constants import NUR, SCRIPTS_DIR
 
-PATH = "/home/tkiet/nuradiomc/events_submit"
+PATH = "/data/user/tkiet/events/events_script"
 SUBMIT = os.path.join(PATH, SCRIPTS_DIR) 
 
 script_path = f"{'*/' if not NUR else ''}*.submit"
