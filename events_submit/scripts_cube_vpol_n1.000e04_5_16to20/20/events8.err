@@ -1,0 +1,23 @@
+/cvmfs/icecube.opensciencegrid.org/py3-v4.1.1/RHEL_7_x86_64/lib/python3.7/site-packages/astropy/config/configuration.py:532: ConfigurationMissingWarning: Configuration defaults will be used due to OSError:Could not find unix home directory to search for astropy config dir on None
+  warn(ConfigurationMissingWarning(msg))
+2022-07-12 00:22:31,951 INFO:NuRadioMC-EvtGen:increasing rmax from 4.0km to 4.0km, zmax from 0.0km to 0.0km
+2022-07-12 00:22:31,951 INFO:NuRadioMC-EvtGen:decreasing rmin from 0.0km to 0.0km
+2022-07-12 00:22:31,951 INFO:NuRadioMC-EvtGen:decreasing zmin from -2.7km to -2.7km
+2022-07-12 00:22:31,951 INFO:NuRadioMC-EvtGen:increasing number of events to 10000
+2022-07-12 00:22:31,952 INFO:NuRadioMC-EvtGen:processing batch 1/1 with 1e+04 events
+2022-07-12 00:22:32,113 INFO:NuRadioMC-EvtGen:Time per event (PROPOSAL only): 0.0000 ms
+2022-07-12 00:22:32,113 INFO:NuRadioMC-EvtGen:Total time (PROPOSAL only) 0s
+2022-07-12 00:22:32,113 INFO:NuRadioMC-EvtGen:number of fiducial showers 12367
+2022-07-12 00:22:32,114 INFO:NuRadioMC-EvtGen:saving 10000 events in total
+2022-07-12 00:22:32,131 STATUS:NuRadioMC-EvtGen:writing file /home/tkiet/nuradiomc/events_submit/events_n1.000e04_5_16to20/events_n1.000e04_1_20to20_8/1.000e20/evt_1.000e20.hdf5.part0000 with 1000 events (id 1 - 1000) and 1244 entries
+2022-07-12 00:22:32,148 STATUS:NuRadioMC-EvtGen:writing file /home/tkiet/nuradiomc/events_submit/events_n1.000e04_5_16to20/events_n1.000e04_1_20to20_8/1.000e20/evt_1.000e20.hdf5.part0001 with 1000 events (id 1001 - 2000) and 1259 entries
+2022-07-12 00:22:32,163 STATUS:NuRadioMC-EvtGen:writing file /home/tkiet/nuradiomc/events_submit/events_n1.000e04_5_16to20/events_n1.000e04_1_20to20_8/1.000e20/evt_1.000e20.hdf5.part0002 with 1000 events (id 2001 - 3000) and 1223 entries
+2022-07-12 00:22:32,179 STATUS:NuRadioMC-EvtGen:writing file /home/tkiet/nuradiomc/events_submit/events_n1.000e04_5_16to20/events_n1.000e04_1_20to20_8/1.000e20/evt_1.000e20.hdf5.part0003 with 1000 events (id 3001 - 4000) and 1243 entries
+2022-07-12 00:22:32,194 STATUS:NuRadioMC-EvtGen:writing file /home/tkiet/nuradiomc/events_submit/events_n1.000e04_5_16to20/events_n1.000e04_1_20to20_8/1.000e20/evt_1.000e20.hdf5.part0004 with 1000 events (id 4001 - 5000) and 1261 entries
+2022-07-12 00:22:32,209 STATUS:NuRadioMC-EvtGen:writing file /home/tkiet/nuradiomc/events_submit/events_n1.000e04_5_16to20/events_n1.000e04_1_20to20_8/1.000e20/evt_1.000e20.hdf5.part0005 with 1000 events (id 5001 - 6000) and 1212 entries
+2022-07-12 00:22:32,224 STATUS:NuRadioMC-EvtGen:writing file /home/tkiet/nuradiomc/events_submit/events_n1.000e04_5_16to20/events_n1.000e04_1_20to20_8/1.000e20/evt_1.000e20.hdf5.part0006 with 1000 events (id 6001 - 7000) and 1226 entries
+2022-07-12 00:22:32,240 STATUS:NuRadioMC-EvtGen:writing file /home/tkiet/nuradiomc/events_submit/events_n1.000e04_5_16to20/events_n1.000e04_1_20to20_8/1.000e20/evt_1.000e20.hdf5.part0007 with 1000 events (id 7001 - 8000) and 1216 entries
+2022-07-12 00:22:32,255 STATUS:NuRadioMC-EvtGen:writing file /home/tkiet/nuradiomc/events_submit/events_n1.000e04_5_16to20/events_n1.000e04_1_20to20_8/1.000e20/evt_1.000e20.hdf5.part0008 with 1000 events (id 8001 - 9000) and 1222 entries
+2022-07-12 00:22:32,270 STATUS:NuRadioMC-EvtGen:writing file /home/tkiet/nuradiomc/events_submit/events_n1.000e04_5_16to20/events_n1.000e04_1_20to20_8/1.000e20/evt_1.000e20.hdf5.part0009 with 1000 events (id 9001 - 10000) and 1261 entries
+2022-07-12 00:22:32,273 INFO:NuRadioMC-EvtGen:wrote 10000 events in total
+2022-07-12 00:22:32,273 STATUS:NuRadioMC-EvtGen:finished in 0s

@@ -1,0 +1,30 @@
+000 (143743263.000.000) 2022-07-12 00:17:56 Job submitted from host: <10.128.11.86:25004?addrs=10.128.11.86-25004&alias=submit-1.icecube.wisc.edu>
+...
+001 (143743263.000.000) 2022-07-12 00:22:24 Job executing on host: <10.128.10.111:35976?addrs=10.128.10.111-35976&alias=node071.icecube.wisc.edu>
+...
+006 (143743263.000.000) 2022-07-12 00:22:28 Image size of job updated: 23108
+	1  -  MemoryUsage of job (MB)
+	340  -  ResidentSetSize of job (KB)
+...
+005 (143743263.000.000) 2022-07-12 00:22:28 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:00:01, Sys 0 00:00:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:00:01, Sys 0 00:00:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	0  -  Run Bytes Sent By Job
+	0  -  Run Bytes Received By Job
+	0  -  Total Bytes Sent By Job
+	0  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   admin_mutex_1         :                           0 
+	   admin_mutex_2         :                           0 
+	   admin_mutex_3         :                           0 
+	   Cpus                  :                 1         1 
+	   Disk (KB)             :        1  1000000   1373773 
+	   GPUs                  :                           0 
+	   machine_token         :                           0 
+	   Memory (MB)           :        1     1000      1024 
+
+	Job terminated of its own accord at 2022-07-12T05:22:28Z.
+...
