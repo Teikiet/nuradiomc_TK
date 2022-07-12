@@ -12,7 +12,7 @@ def _mkdir(path):
     if not os.path.isdir(path):
         os.mkdir(path)
 
-PATH = "/home/tkiet/nuradiomc/events_submit/events_script/"
+PATH = "/home/tkiet/nuradiomc/events_submit/"
 PATH2 = "/data/user/tkiet/events/"
 #os.environ['NURADIOMC_WORKDIR'] 
 #os.path.join(PATH, DET_FILE)
