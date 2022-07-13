@@ -144,7 +144,7 @@ channelGenericNoiseAdder = NuRadioReco.modules.channelGenericNoiseAdder.channelG
 """
 
 
-    class Simulation(simulation.simulation):
+class Simulation(simulation.simulation):
 <<<<<<< HEAD
         
         
@@ -153,7 +153,7 @@ channelGenericNoiseAdder = NuRadioReco.modules.channelGenericNoiseAdder.channelG
 
 >>>>>>> b951e4764ff188e5ab0dac0534fb46aa4c439320
 
-        def _detector_simulation_filter_amp(self, evt, station, det):
+    def _detector_simulation_filter_amp(self, evt, station, det):
 """
             This function defines the signal chain, i.e., typically the filters and amplifiers.
             (The antenna response will be applied automatically using the antenna model defined
@@ -162,12 +162,12 @@ channelGenericNoiseAdder = NuRadioReco.modules.channelGenericNoiseAdder.channelG
             we will only implement a couple of filters, one that acts as a low-pass
             and another one that acts as a high-pass.
 """
-            channelBandPassFilter.run(evt, station, det,
+        channelBandPassFilter.run(evt, station, det,
                                     passband=[1 * units.MHz, 700 * units.MHz], filter_type="butter", order=10)
-            channelBandPassFilter.run(evt, station, det,
+        channelBandPassFilter.run(evt, station, det,
                                     passband=[150 * units.MHz, 800 * units.GHz], filter_type="butter", order=8)
 
-        def _detector_simulation_trigger(self, evt, station, det):
+    def _detector_simulation_trigger(self, evt, station, det):
 
 """
             This function defines the trigger
@@ -180,7 +180,7 @@ channelGenericNoiseAdder = NuRadioReco.modules.channelGenericNoiseAdder.channelG
             detector.json) by specifying their channel ids, defined in the detector file.
             It is also important to give a descriptive name to the trigger.
 """
-            highLowThreshold.run(evt, station, det,
+        highLowThreshold.run(evt, station, det,
                                 threshold_high=1 * self._Vrms,
                                 threshold_low=-1 * self._Vrms,
                                 coinc_window=40 * units.ns,
@@ -192,7 +192,7 @@ channelGenericNoiseAdder = NuRadioReco.modules.channelGenericNoiseAdder.channelG
             the noise RMS. If the absolute value of the voltage goes above that
             threshold, the event triggers.
 """
-            simpleThreshold.run(evt, station, det,
+        simpleThreshold.run(evt, station, det,
                                 threshold=10 * self._Vrms,
                                 triggered_channels=[0, 1, 2, 3],
                                 trigger_name='simple_10_sigma')
