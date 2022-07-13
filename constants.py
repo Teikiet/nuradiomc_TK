@@ -23,18 +23,18 @@ NUM_FORMAT = lambda x: f"{x:.3e}".replace("+", "")
 
 # The power raising 10 to
 E_MIN = 16
-E_MAX = 21
+E_MAX = 18
 
 # Number of simulations, logarithmically equidistant
 # between 10^E_MIN and 10^E_MAX
 NUM_SIMS = 6
 
 # Number of events per simulation
-NUM_EVENTS = 1e4
-NUM_EVENTS_PER_FILE = 1e2
+NUM_EVENTS = 1e6
+NUM_EVENTS_PER_FILE = 1e3
 
 # Detector's json file
-DET_NAME = "cube_vpol"
+DET_NAME = "surface_station"
 DET_FILE = path.join(DET_PATH, f"{DET_NAME}_detector.json")
 
 # Parent Directory names
