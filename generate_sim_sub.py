@@ -60,8 +60,8 @@ for fname in sorted(glob.glob(os.path.join(INPUT, file_format))):
     data = f"executable = {sh_name}\n" 
     data += f"log = {sh_name[:-2] + 'log'}\n"
     data += f"output = {sh_name[:-2] + 'out'}\n"
-    data += f"error = {sh_name[:-2] + 'err'}\n\n"
-    data += "request_memory = 10GB"
+    data += f"error = {sh_name[:-2] + 'err'}\n"
+    data += "request_memory = 10GB\n\n"
     data += "queue 1\n"
 
     # and now write .submit files
