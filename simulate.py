@@ -145,9 +145,13 @@ channelGenericNoiseAdder = NuRadioReco.modules.channelGenericNoiseAdder.channelG
 
 
     class Simulation(simulation.simulation):
+<<<<<<< HEAD
         
         
         
+=======
+
+>>>>>>> b951e4764ff188e5ab0dac0534fb46aa4c439320
 
         def _detector_simulation_filter_amp(self, evt, station, det):
 """
