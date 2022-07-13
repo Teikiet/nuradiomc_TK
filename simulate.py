@@ -148,14 +148,7 @@ class Simulation(simulation.simulation):
 
 
     def _detector_simulation_filter_amp(self, evt, station, det):
-"""
-            This function defines the signal chain, i.e., typically the filters and amplifiers.
-            (The antenna response will be applied automatically using the antenna model defined
-            in the detector description.)
-            In our case,
-            we will only implement a couple of filters, one that acts as a low-pass
-            and another one that acts as a high-pass.
-"""
+
         channelBandPassFilter.run(evt, station, det,
                                     passband=[1 * units.MHz, 700 * units.MHz], filter_type="butter", order=10)
         channelBandPassFilter.run(evt, station, det,
@@ -163,17 +156,7 @@ class Simulation(simulation.simulation):
 
     def _detector_simulation_trigger(self, evt, station, det):
 
-"""
-            This function defines the trigger
-            to know when an event has triggered. NuRadioMC and NuRadioReco support multiple
-            triggers per detector. As an example, we will use a high-low threshold trigger
-            with a high level of 5 times the noise RMS, and a low level of minus
-            5 times the noise RMS, a coincidence window of 40 nanoseconds and request
-            a coincidence of 2 out of 4 antennas. We can also choose which subset of
-            channels we want to use for triggering (we will use the four channels in
-            detector.json) by specifying their channel ids, defined in the detector file.
-            It is also important to give a descriptive name to the trigger.
-"""
+
         highLowThreshold.run(evt, station, det,
                                 threshold_high=1 * self._Vrms,
                                 threshold_low=-1 * self._Vrms,
@@ -181,31 +164,10 @@ class Simulation(simulation.simulation):
                                 triggered_channels=[0, 1, 2, 3],
                                 number_concidences=2,  # 2/4 majority logic
                                 trigger_name='hilo_2of4_5_sigma')
-"""
-            We can add as well a simple trigger threshold of 10 sigma, or 10 times
-            the noise RMS. If the absolute value of the voltage goes above that
-            threshold, the event triggers.
-"""
+
         simpleThreshold.run(evt, station, det,
                                 threshold=10 * self._Vrms,
                                 triggered_channels=[0, 1, 2, 3],
                                 trigger_name='simple_10_sigma')
 
-"""
-    Now that the detector response has been written, we create an instance of
-    mySimulation with the following arguments:
-    - The input file name, with the neutrino events
-    - The output file name
-    - The name of detector description file
-    - The name of the output nur file (can be None if we don't want nur files)
-    - The name of the config file
 
-    We have also used here two optional arguments, which are default_detector_station
-    and default_detector channel. If we define a complete detector station with all
-    of its channels (101 in our case) and we want to add more stations, we can define
-    these with fewer parameters than needed. Then, making default_detector_station=101,
-    all the missing necessary parameters will be taken from the station 101, along
-    with all of the channels from station 101. A similar thing happens if we define
-    channels with incomplete information and set default_detector_station=0 - the
-    incomplete channels will be completed using the characteristics from channel 0.
-"""
