@@ -85,7 +85,7 @@ import matplotlib.pyplot as plt
 import os
 
 
-    """
+"""
     This file is a steering file that runs a simple NuRadioMC simulation. If one
     wants to run it with the default parameters, one just needs to type:
 
@@ -125,15 +125,15 @@ import os
 
     First we initialise the modules we are going to use. For our simulation, we are
     going to need the following ones, which are explained below.
-    """
-    efieldToVoltageConverter = NuRadioReco.modules.efieldToVoltageConverter.efieldToVoltageConverter()
-    simpleThreshold = NuRadioReco.modules.trigger.simpleThreshold.triggerSimulator()
-    highLowThreshold = NuRadioReco.modules.trigger.highLowThreshold.triggerSimulator()
-    channelResampler = NuRadioReco.modules.channelResampler.channelResampler()
-    channelBandPassFilter = NuRadioReco.modules.channelBandPassFilter.channelBandPassFilter()
-    channelGenericNoiseAdder = NuRadioReco.modules.channelGenericNoiseAdder.channelGenericNoiseAdder()
+"""
+efieldToVoltageConverter = NuRadioReco.modules.efieldToVoltageConverter.efieldToVoltageConverter()
+simpleThreshold = NuRadioReco.modules.trigger.simpleThreshold.triggerSimulator()
+highLowThreshold = NuRadioReco.modules.trigger.highLowThreshold.triggerSimulator()
+channelResampler = NuRadioReco.modules.channelResampler.channelResampler()
+channelBandPassFilter = NuRadioReco.modules.channelBandPassFilter.channelBandPassFilter()
+channelGenericNoiseAdder = NuRadioReco.modules.channelGenericNoiseAdder.channelGenericNoiseAdder()
 
-    """
+"""
     A typical NuRadioMC simulation uses the simulation class from the simulation
     module. This class is incomplete by design, since it lacks the detector simulation
     functions that controls what the detector does after the electric field arrives
@@ -141,23 +141,23 @@ import os
     the simulation class that we will call mySimulation, and define in it a
     _detector_simulation_filter_amp and _detector_simulation_trigger 
     function with all the characteristics of our detector setup.
-    """
+"""
 
 
     class Simulation(simulation.simulation):
-        """
         
-        """
+        
+        
 
         def _detector_simulation_filter_amp(self, evt, station, det):
-            """
+"""
             This function defines the signal chain, i.e., typically the filters and amplifiers.
             (The antenna response will be applied automatically using the antenna model defined
             in the detector description.)
             In our case,
             we will only implement a couple of filters, one that acts as a low-pass
             and another one that acts as a high-pass.
-            """
+"""
             channelBandPassFilter.run(evt, station, det,
                                     passband=[1 * units.MHz, 700 * units.MHz], filter_type="butter", order=10)
             channelBandPassFilter.run(evt, station, det,
@@ -165,7 +165,7 @@ import os
 
         def _detector_simulation_trigger(self, evt, station, det):
 
-            """
+"""
             This function defines the trigger
             to know when an event has triggered. NuRadioMC and NuRadioReco support multiple
             triggers per detector. As an example, we will use a high-low threshold trigger
@@ -175,7 +175,7 @@ import os
             channels we want to use for triggering (we will use the four channels in
             detector.json) by specifying their channel ids, defined in the detector file.
             It is also important to give a descriptive name to the trigger.
-            """
+"""
             highLowThreshold.run(evt, station, det,
                                 threshold_high=1 * self._Vrms,
                                 threshold_low=-1 * self._Vrms,
@@ -183,17 +183,17 @@ import os
                                 triggered_channels=[0, 1, 2, 3],
                                 number_concidences=2,  # 2/4 majority logic
                                 trigger_name='hilo_2of4_5_sigma')
-            """
+"""
             We can add as well a simple trigger threshold of 10 sigma, or 10 times
             the noise RMS. If the absolute value of the voltage goes above that
             threshold, the event triggers.
-            """
+"""
             simpleThreshold.run(evt, station, det,
                                 threshold=10 * self._Vrms,
                                 triggered_channels=[0, 1, 2, 3],
                                 trigger_name='simple_10_sigma')
 
-    """
+"""
     Now that the detector response has been written, we create an instance of
     mySimulation with the following arguments:
     - The input file name, with the neutrino events
@@ -210,4 +210,4 @@ import os
     with all of the channels from station 101. A similar thing happens if we define
     channels with incomplete information and set default_detector_station=0 - the
     incomplete channels will be completed using the characteristics from channel 0.
-    """
+"""
