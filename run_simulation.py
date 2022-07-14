@@ -13,7 +13,7 @@ parser.add_argument('outputfilename', type=str)
 if NUR:
     parser.add_argument('outputfilenameNuRadioReco', type=str)
 parser.add_argument('detectorfile', type=str)
-#parser.add_argument('configfile', type=str)
+parser.add_argument('configfile', type=str)
 args = parser.parse_args()
 
 sim = Simulation(
@@ -21,7 +21,7 @@ sim = Simulation(
     outputfilename=args.outputfilename,
     outputfilenameNuRadioReco=None if not NUR else args.outputfilenameNuRadioReco,
     detectorfile=args.detectorfile,
-   # config_file=args.configfile,
+    config_file=args.configfile,
     file_overwrite=True,
 )
 sim.run()

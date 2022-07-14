@@ -5,7 +5,7 @@ There is exactly one .sh and .submit file for each hdf5 event file to spread acr
 import glob
 import os
 
-from constants import NUR, DET_FILE, EVTS_DIR, SIMS_DIR, SCRIPTS_DIR
+from constants import NUR, DET_FILE, EVTS_DIR, SIMS_DIR, SCRIPTS_DIR, DETECTOR, CONFIG
 
 
 def _mkdir(path):
@@ -15,7 +15,7 @@ def _mkdir(path):
 PATH2 = "/data/user/tkiet/finish_sims"
 PATH3 = "/data/user/tkiet/events"
 PATH = os.environ['NURADIOMC_WORKDIR'] 
-DETECTOR = "/home/tkiet/nuradiomc/ara1.json" #os.path.join(PATH, DET_FILE)
+#os.path.join(PATH, DET_FILE)
 INPUT = os.path.join(PATH3, EVTS_DIR)
 OUTPUT = os.path.join(PATH2, SIMS_DIR) 
 SCRIPTS = os.path.join(PATH, SCRIPTS_DIR) 
@@ -40,7 +40,7 @@ for fname in sorted(glob.glob(os.path.join(INPUT, file_format))):
 
     # Command to run in .sh file
     cmd = f"export PYTHONPATH={os.environ['PYTHONPATH']}\n"
-    cmd += f"python {pyname} {fname} {outputfilename} {'' if not NUR else outputfilenameNuRadioReco} {DETECTOR}\n"
+    cmd += f"python {pyname} {fname} {outputfilename} {'' if not NUR else outputfilenameNuRadioReco} {DETECTOR} {CONFIG}\n"
 
     header = "#!/bin/sh\n"
     # Setup python environment (currently python 3.7)
