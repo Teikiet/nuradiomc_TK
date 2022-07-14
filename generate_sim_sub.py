@@ -15,7 +15,7 @@ def _mkdir(path):
 PATH2 = "/data/user/tkiet/finish_sims"
 PATH3 = "/data/user/tkiet/events"
 PATH = os.environ['NURADIOMC_WORKDIR'] 
-DETECTOR = "/home/tkiet/nuradiomc/surface_station_1GHz.json" #os.path.join(PATH, DET_FILE)
+DETECTOR = "/home/tkiet/nuradiomc/ara1.json" #os.path.join(PATH, DET_FILE)
 INPUT = os.path.join(PATH3, EVTS_DIR)
 OUTPUT = os.path.join(PATH2, SIMS_DIR) 
 SCRIPTS = os.path.join(PATH, SCRIPTS_DIR) 
@@ -61,7 +61,7 @@ for fname in sorted(glob.glob(os.path.join(INPUT, file_format))):
     data += f"log = {sh_name[:-2] + 'log'}\n"
     data += f"output = {sh_name[:-2] + 'out'}\n"
     data += f"error = {sh_name[:-2] + 'err'}\n"
-    data += "request_memory = 5GB\n\n"
+    data += "request_memory = 1GB\n\n"
     data += "queue 1\n"
 
     # and now write .submit files

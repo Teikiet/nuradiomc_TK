@@ -34,7 +34,7 @@ NUM_EVENTS = 1e6
 NUM_EVENTS_PER_FILE = 1e3
 
 # Detector's json file
-DET_NAME = "surface_station"
+DET_NAME = "ara1"
 DET_FILE = path.join(DET_PATH, f"{DET_NAME}_detector.json")
 
 # Parent Directory names
