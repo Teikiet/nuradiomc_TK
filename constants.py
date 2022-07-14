@@ -39,7 +39,7 @@ DET_FILE = path.join(DET_PATH, f"{DET_NAME}_detector.json")
 DETECTOR = "/home/tkiet/nuradiomc/ara1.json"
 
 #Configuration:
-CONFIG = "config_file_focusing.yaml"
+CONFIG = "/home/tkiet/nuradiomc/config_file_focusing.yaml"
 
 # Parent Directory names
 EVTS_DIR = f"{EVTS_PATH}_n{NUM_FORMAT(NUM_EVENTS)}_{NUM_SIMS}_{E_MIN}to{E_MAX}"
