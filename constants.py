@@ -34,9 +34,9 @@ NUM_EVENTS = 1e6
 NUM_EVENTS_PER_FILE = 1e3
 
 # Detector's json file
-DET_NAME = "ara1"
+DET_NAME = "surface"
 DET_FILE = path.join(DET_PATH, f"{DET_NAME}_detector.json")
-DETECTOR = "/home/tkiet/nuradiomc/ara1.json"
+DETECTOR = "/home/tkiet/nuradiomc/surface_station_1GHz.json"
 
 #Configuration:
 CONFIG = "/home/tkiet/nuradiomc/config_file_focusing.yaml"
